@@ -10,3 +10,5 @@ scikit-learn==0.18.2
 scipy==0.19.1
 six==1.10.0
 subprocess32==3.2.7
+requests # needed for googlengram/pullscripts/downloadandsplit.py
+# 'ioutils', also needed for googlengram/pullscripts/downloadandsplit.py refers to *local* import of ioutils.py from this repo (add '.' to your PYTHONPATH)

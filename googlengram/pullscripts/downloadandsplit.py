@@ -6,7 +6,7 @@ import subprocess
 import argparse
 from multiprocessing import Process, Queue
 
-import ioutils
+import ioutils # this refers to ioutils.py in the root of this repo. To get access, add '.' to your PYTHONPATH
 
 VERSION = '20120701'
 TYPE = '5gram'
@@ -71,3 +71,12 @@ if __name__ == '__main__':
     parser.add_argument("num_procs", type=int, help="number of processes to spawn")
     args = parser.parse_args()
     run_parallel(args.num_procs, args.out_dir, args.source) 
+
+
+
+# NOTE: this script downloads dataset v2, and v3 is out now.
+
+# example cli invocations:
+# python2 googlengram/pullscripts/downloadandsplit.py  _DATA/  eng-us-all  4
+# python2 googlengram/pullscripts/downloadandsplit.py  _DATA/  eng-all  4
+# python2 googlengram/pullscripts/downloadandsplit.py  _DATA/  fre-all  4
